@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # curl -L -u "user:token" https://HOSTNAME/stafftools/reports/all_users.csv > users.csv
 
@@ -19,7 +19,7 @@ do
 
                 if [[ $decide -le $todate ]]
                 then
-                        echo $line | awk -F "," '{print $4}' >> inactiveusers.csv
+                        echo $line | awk -F "," 'BEGIN { OFS=","} {print $3, $4}' >> inactiveusers.csv
                 fi
         fi
 done < "users.csv"
