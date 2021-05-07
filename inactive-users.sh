@@ -19,7 +19,7 @@ do
 
                 if [[ $decide -le $todate ]]
                 then
-                        echo $line | awk -F "," '{print $4}'
+                        echo $line | awk -F "," '{print $4}' >> inactiveusers.csv
                 fi
         fi
-done < "userslist"
+done < "users.csv"
