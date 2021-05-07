@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# curl -L -u "user:token" https://HOSTNAME/stafftools/reports/all_users.csv > userslist
+# curl -L -u "user:token" https://HOSTNAME/stafftools/reports/all_users.csv > users.csv
 
 d=$(date -d "now - 14 days" +%Y-%m-%d)
 todate=$(date -d $d +%s)
